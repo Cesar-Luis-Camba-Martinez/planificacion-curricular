@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Planificación Curricular – Ecuaciones</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Times New Roman', serif; font-size: 11pt; color: #1a1a1a; background: #f0f0f0; }
+  .page { background: #fff; width: 960px; margin: 30px auto; padding: 40px 50px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+
+  /* ENCABEZADO */
+  .header-table { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
+  .header-table td { border: 1.5px solid #1a1a1a; padding: 6px 10px; vertical-align: middle; }
+  .header-logo { width: 80px; text-align: center; }
+  .header-logo img { width: 70px; }
+  .header-center { text-align: center; font-weight: bold; font-size: 12pt; line-height: 1.6; }
+  .header-right { text-align: center; font-size: 10pt; font-weight: bold; width: 140px; }
+
+  /* TÍTULO PRINCIPAL */
+  .titulo-principal { text-align: center; font-size: 14pt; font-weight: bold; text-transform: uppercase;
+    background: #1f3864; color: #fff; padding: 10px; margin-bottom: 18px; letter-spacing: 1px; }
+
+  /* DATOS INFORMATIVOS */
+  .datos-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 10.5pt; }
+  .datos-table td { border: 1.2px solid #555; padding: 5px 10px; }
+  .datos-table .label { background: #dce6f1; font-weight: bold; width: 22%; }
+  .datos-table .label2 { background: #dce6f1; font-weight: bold; width: 18%; }
+
+  /* SECCIÓN UNIDAD */
+  .unidad-header { background: #1f3864; color: #fff; font-size: 12pt; font-weight: bold;
+    text-align: center; padding: 8px; margin: 22px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px; }
+  .unidad-sub { background: #2e75b6; color: #fff; font-size: 11pt; font-weight: bold;
+    padding: 6px 14px; margin-bottom: 0; }
+
+  /* TABLA CRONOGRAMA */
+  .crono-table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 14px; }
+  .crono-table th { background: #2e75b6; color: #fff; padding: 7px 8px; text-align: center; border: 1px solid #aaa; }
+  .crono-table td { border: 1px solid #aaa; padding: 6px 8px; vertical-align: top; }
+  .crono-table tr:nth-child(even) td { background: #eaf1fb; }
+
+  /* TABLA DE PLANIFICACIÓN */
+  .plan-table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 14px; }
+  .plan-table th { background: #1f3864; color: #fff; padding: 7px 10px; text-align: center;
+    border: 1px solid #aaa; font-size: 10.5pt; }
+  .plan-table td { border: 1px solid #aaa; padding: 7px 10px; vertical-align: top; }
+  .plan-table .sub-th { background: #2e75b6; color: #fff; font-weight: bold; padding: 6px 10px; }
+  .plan-table tr:nth-child(even) td { background: #f5f9ff; }
+
+  /* TEMA HEADER */
+  .tema-header { background: #c5d9f1; font-weight: bold; font-size: 10.5pt;
+    padding: 6px 10px; border-left: 4px solid #1f3864; margin: 12px 0 6px 0; }
+
+  /* LISTAS */
+  ul.content-list { padding-left: 18px; margin: 4px 0; }
+  ul.content-list li { margin-bottom: 3px; line-height: 1.5; }
+
+  /* SECCIÓN EVALUACIÓN */
+  .eval-table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 14px; }
+  .eval-table th { background: #375623; color: #fff; padding: 7px; border: 1px solid #aaa; text-align: center; }
+  .eval-table td { border: 1px solid #aaa; padding: 6px 8px; vertical-align: top; }
+  .eval-table tr:nth-child(even) td { background: #ebf1de; }
+
+  /* BIBLIOGRAFÍA */
+  .biblio { font-size: 10pt; line-height: 1.8; margin: 8px 0; padding-left: 28px; text-indent: -28px; }
+
+  /* FIRMA */
+  .firmas { display: flex; justify-content: space-around; margin-top: 40px; text-align: center; }
+  .firma-box { width: 200px; border-top: 1.5px solid #1a1a1a; padding-top: 6px; font-size: 10pt; }
+
+  /* SLOGAN */
+  .slogan { text-align: center; font-style: italic; font-size: 10pt; color: #1f3864;
+    font-weight: bold; margin-top: 10px; border-top: 2px solid #1f3864; padding-top: 8px; }
+
+  /* SEPARADOR */
+  hr.sep { border: none; border-top: 2.5px solid #1f3864; margin: 28px 0 10px 0; }
+
+  .page-break { page-break-before: always; }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; padding: 30px 40px; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ENCABEZADO INSTITUCIONAL -->
+  <table class="header-table">
+    <tr>
+      <td class="header-logo" rowspan="2">🏫</td>
+      <td class="header-center">
+        MINISTERIO DE EDUCACIÓN DEL ECUADOR<br/>
+        PLANIFICACIÓN CURRICULAR DE UNIDAD<br/>
+        ÁREA: MATEMÁTICA
+      </td>
+      <td class="header-right">
+        AÑO LECTIVO<br/>2025 – 2026
+      </td>
+    </tr>
+  </table>
+
+  <!-- TÍTULO -->
+  <div class="titulo-principal">Planificación Curricular – Ecuaciones y Lenguaje Algebraico</div>
+
+  <!-- DATOS INFORMATIVOS -->
+  <table class="datos-table">
+    <tr>
+      <td class="label">Área / Asignatura:</td>
+      <td>Matemática</td>
+      <td class="label2">Año de E.G.B.:</td>
+      <td>8.° de Educación General Básica</td>
+    </tr>
+    <tr>
+      <td class="label">Docente:</td>
+      <td>_________________________________</td>
+      <td class="label2">Período académico:</td>
+      <td>Mayo – Junio 2026</td>
+    </tr>
+    <tr>
+      <td class="label">N.° de unidades:</td>
+      <td>3 (Tres)</td>
+      <td class="label2">N.° de semanas:</td>
+      <td>5 semanas (Unidad 1) + continuo (Unidades 2 y 3)</td>
+    </tr>
+    <tr>
+      <td class="label">Eje transversal:</td>
+      <td colspan="3">Innovación tecnológica · Pensamiento crítico · Resolución de problemas reales</td>
+    </tr>
+  </table>
+
+  <!-- ============================= UNIDAD 1 ============================= -->
+  <div class="unidad-header">UNIDAD 1: Introducción a las ecuaciones y su aplicación en la vida cotidiana</div>
+
+  <!-- OBJETIVO UNIDAD 1 -->
+  <table class="plan-table" style="margin-top:10px;">
+    <tr><th colspan="2">OBJETIVO DE LA UNIDAD 1</th></tr>
+    <tr>
+      <td colspan="2">Desarrollar el pensamiento algebraico de los estudiantes a través de la comprensión del concepto de igualdad, el uso de variables y expresiones algebraicas, y la resolución de ecuaciones de primer grado con una incógnita, aplicando estos conocimientos en situaciones de la vida cotidiana.</td>
+    </tr>
+  </table>
+
+  <!-- CRONOGRAMA UNIDAD 1 -->
+  <div class="unidad-sub">📅 Cronograma de Contenidos – Unidad 1</div>
+  <table class="crono-table">
+    <thead>
+      <tr>
+        <th>Semana</th>
+        <th>Fecha</th>
+        <th>Tema</th>
+        <th>Contenidos Claves</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;font-weight:bold;">Semana 1</td>
+        <td>11 al 15 de mayo de 2026</td>
+        <td>Introducción a las ecuaciones</td>
+        <td>Concepto de igualdad, pensamiento algebraico inicial.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:bold;">Semana 2</td>
+        <td>18 al 22 de mayo de 2026</td>
+        <td>Variables y expresiones algebraicas</td>
+        <td>Uso de letras como variables, construcción de expresiones simples.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:bold;">Semana 3</td>
+        <td>25 al 29 de mayo de 2026</td>
+        <td>Ecuaciones de primer grado</td>
+        <td>Definición, partes de la ecuación, resolución con una incógnita.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:bold;">Semana 4</td>
+        <td>1 al 5 de junio de 2026</td>
+        <td>Resolución básica de ecuaciones</td>
+        <td>Principio de equivalencia, operaciones inversas (suma/resta, multiplicación/división).</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:bold;">Semana 5</td>
+        <td>8 al 12 de junio de 2026</td>
+        <td>Aplicación en la vida diaria</td>
+        <td>Modelación y resolución de situaciones reales mediante ecuaciones.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- PLANIFICACIÓN DETALLADA UNIDAD 1 -->
+  <div class="unidad-sub">📋 Planificación Detallada – Unidad 1</div>
+  <table class="plan-table">
+    <tr>
+      <th style="width:25%;">Componente</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td class="sub-th">Destreza con Criterio de Desempeño (DCD)</td>
+      <td>Comprender el concepto de igualdad y pensamiento algebraico, construir y resolver ecuaciones de primer grado con una incógnita, aplicando principios de equivalencia y operaciones inversas en contextos de la vida real.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Indicadores de Evaluación</td>
+      <td>
+        <ul class="content-list">
+          <li>Identifica el concepto de igualdad y lo distingue de la simple operación aritmética.</li>
+          <li>Construye expresiones algebraicas simples a partir de enunciados cotidianos.</li>
+          <li>Reconoce las partes de una ecuación de primer grado (incógnita, coeficientes, términos independientes).</li>
+          <li>Aplica el principio de equivalencia y operaciones inversas para resolver ecuaciones del tipo x + a = b y ax = b.</li>
+          <li>Verifica las soluciones obtenidas sustituyendo la incógnita en la ecuación original.</li>
+          <li>Modela situaciones cotidianas mediante ecuaciones y las resuelve correctamente.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Estrategia Metodológica</td>
+      <td>
+        <strong>Fase Inicial (Inicio):</strong> Activación de conocimientos previos con preguntas generadoras sobre situaciones de igualdad en la vida diaria (balanzas, distribuciones equitativas). Uso de material concreto (balanza didáctica).<br/><br/>
+        <strong>Fase de Construcción:</strong> Presentación progresiva de los conceptos: igualdad → variable → expresión algebraica → ecuación. Modelado docente con ejemplos graduales. Trabajo colaborativo en pares para resolver ecuaciones tipo x + a = b y ax = b, verificando sus soluciones.<br/><br/>
+        <strong>Fase de Consolidación:</strong> Aplicación de ecuaciones en problemas reales (reparto, compras, edades). Plenaria de socialización de resultados. Retroalimentación grupal e individual.
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Recursos</td>
+      <td>Pizarra, marcadores, balanza didáctica, fichas de trabajo, proyector, cuadernos de ejercicios, material impreso con problemas contextualizados.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Adaptación Curricular</td>
+      <td>Para estudiantes con necesidades educativas especiales: simplificación de enunciados, uso de representaciones gráficas y material manipulativo adicional. Ampliación para estudiantes con alto rendimiento: ecuaciones con dos operaciones combinadas.</td>
+    </tr>
+  </table>
+
+  <!-- EVALUACIÓN UNIDAD 1 -->
+  <div class="unidad-sub">📊 Evaluación – Unidad 1</div>
+  <table class="eval-table">
+    <thead>
+      <tr>
+        <th>Técnica</th>
+        <th>Instrumento</th>
+        <th>Criterio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Observación directa</td>
+        <td>Lista de cotejo</td>
+        <td>Participación activa, procedimiento correcto de resolución.</td>
+      </tr>
+      <tr>
+        <td>Prueba escrita</td>
+        <td>Cuestionario de ecuaciones</td>
+        <td>Identificación de elementos, resolución y verificación de ecuaciones.</td>
+      </tr>
+      <tr>
+        <td>Portafolio</td>
+        <td>Registro de ejercicios</td>
+        <td>Organización, presentación y progresión de aprendizajes.</td>
+      </tr>
+      <tr>
+        <td>Resolución de problemas</td>
+        <td>Rúbrica analítica</td>
+        <td>Modelado, procedimiento, solución correcta e interpretación del resultado.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr class="sep"/>
+
+  <!-- ============================= UNIDAD 2 ============================= -->
+  <div class="unidad-header">UNIDAD 2: Ecuaciones y recursos digitales</div>
+
+  <!-- OBJETIVO UNIDAD 2 -->
+  <table class="plan-table" style="margin-top:10px;">
+    <tr><th colspan="2">OBJETIVO DE LA UNIDAD 2</th></tr>
+    <tr>
+      <td colspan="2">Integrar recursos digitales, actividades interactivas, juegos educativos y la herramienta GeoGebra en el proceso de aprendizaje de las ecuaciones de primer grado, fomentando el uso reflexivo de la tecnología y la comprensión gráfica y algebraica de soluciones.</td>
+    </tr>
+  </table>
+
+  <!-- TEMA 2.1 -->
+  <div class="tema-header">📌 Tema 1: Uso de recursos digitales para aprender ecuaciones</div>
+  <table class="plan-table">
+    <tr>
+      <th style="width:25%;">Componente</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td class="sub-th">Subtemas</td>
+      <td>
+        <ul class="content-list">
+          <li><strong>Uso de actividades interactivas:</strong> plataformas como Kahoot, Desmos, Khan Academy y herramientas en línea para practicar ecuaciones de forma dinámica.</li>
+          <li><strong>Juegos educativos digitales:</strong> aplicaciones y recursos gamificados que desarrollan el pensamiento algebraico (DragonBox Algebra, Math Playground, etc.).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">DCD</td>
+      <td>Utilizar herramientas digitales interactivas para reforzar la comprensión y resolución de ecuaciones de primer grado, reconociendo el valor educativo de los recursos tecnológicos.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Indicadores de Evaluación</td>
+      <td>
+        <ul class="content-list">
+          <li>Participa activamente en actividades digitales interactivas sobre ecuaciones.</li>
+          <li>Utiliza juegos educativos digitales como estrategia de práctica y refuerzo algebraico.</li>
+          <li>Reflexiona sobre las ventajas del aprendizaje mediado por tecnología.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Estrategia Metodológica</td>
+      <td>
+        <strong>Inicio:</strong> Lluvia de ideas sobre recursos digitales que los estudiantes ya conocen para aprender matemáticas.<br/><br/>
+        <strong>Construcción:</strong> Sesión de exploración guiada en sala de computación: acceso a plataformas interactivas, resolución de ecuaciones en entornos digitales, rotación por estaciones digitales (uno por tema/herramienta).<br/><br/>
+        <strong>Consolidación:</strong> Reflexión grupal: ¿Qué herramienta fue más útil? ¿Por qué? Construcción colectiva de un mapa conceptual digital sobre los recursos utilizados.
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Recursos</td>
+      <td>Sala de computación o dispositivos móviles con acceso a internet, proyector, Kahoot preparado por el docente, fichas de registro de actividades, pizarra digital (si disponible).</td>
+    </tr>
+  </table>
+
+  <!-- TEMA 2.2 -->
+  <div class="tema-header">📌 Tema 2: GeoGebra como recurso digital para aprender ecuaciones</div>
+  <table class="plan-table">
+    <tr>
+      <th style="width:25%;">Componente</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td class="sub-th">Subtemas</td>
+      <td>
+        <ul class="content-list">
+          <li><strong>Simulaciones básicas en GeoGebra:</strong> construcción e interpretación de representaciones gráficas de ecuaciones lineales.</li>
+          <li><strong>Aprendizaje en entornos virtuales:</strong> uso de GeoGebra para resolver problemas contextualizados con ecuaciones de primer grado.</li>
+          <li><strong>Solución algebraica de ecuaciones lineales:</strong> procedimiento paso a paso en el entorno digital.</li>
+          <li><strong>Comparación entre solución algebraica y solución gráfica:</strong> análisis de la relación entre ambos métodos de resolución.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">DCD</td>
+      <td>Resolver ecuaciones de primer grado utilizando GeoGebra como herramienta digital, comparando la solución algebraica con la representación gráfica e interpretando los resultados en contextos reales.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Indicadores de Evaluación</td>
+      <td>
+        <ul class="content-list">
+          <li>Construye representaciones gráficas de ecuaciones lineales en GeoGebra.</li>
+          <li>Resuelve ecuaciones de primer grado algebraicamente y verifica la solución de forma gráfica.</li>
+          <li>Compara y explica la relación entre la solución algebraica y la intersección gráfica.</li>
+          <li>Aplica GeoGebra en la resolución de problemas contextualizados con ecuaciones.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Estrategia Metodológica</td>
+      <td>
+        <strong>Inicio:</strong> Demostración docente en GeoGebra proyectado: ingreso de una ecuación simple y observación de su gráfica. Preguntas de exploración: «¿Qué representa el punto donde la recta cruza el eje x?»<br/><br/>
+        <strong>Construcción:</strong> Práctica guiada: los estudiantes ingresan sus propias ecuaciones en GeoGebra, identifican la solución gráfica y la comparan con su solución algebraica obtenida previamente. Trabajo en dúos con hoja de registro de observaciones.<br/><br/>
+        <strong>Consolidación:</strong> Resolución de 2 problemas contextualizados (situación real → ecuación → solución algebraica → verificación en GeoGebra). Presentación breve de resultados al grupo.
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Recursos</td>
+      <td>Computadoras o tablets con GeoGebra instalado o en versión web (geogebra.org), proyector, hoja de registro comparativo algebraico-gráfico, problemas contextualizados impresos.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Adaptación Curricular</td>
+      <td>Para estudiantes con dificultades tecnológicas: acompañamiento tutorial paso a paso con tarjetas de instrucciones visuales. Para estudiantes avanzados: exploración de ecuaciones con dos variables en GeoGebra.</td>
+    </tr>
+  </table>
+
+  <!-- EVALUACIÓN UNIDAD 2 -->
+  <div class="unidad-sub">📊 Evaluación – Unidad 2</div>
+  <table class="eval-table">
+    <thead>
+      <tr>
+        <th>Técnica</th>
+        <th>Instrumento</th>
+        <th>Criterio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Observación de desempeño digital</td>
+        <td>Lista de cotejo digital</td>
+        <td>Uso correcto de herramientas digitales y participación activa.</td>
+      </tr>
+      <tr>
+        <td>Proyecto práctico en GeoGebra</td>
+        <td>Rúbrica analítica</td>
+        <td>Construcción gráfica, comparación algebraica e interpretación del resultado.</td>
+      </tr>
+      <tr>
+        <td>Autoevaluación</td>
+        <td>Ficha de autoevaluación</td>
+        <td>Reflexión sobre el uso de recursos digitales y dificultades encontradas.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr class="sep"/>
+
+  <!-- ============================= UNIDAD 3 ============================= -->
+  <div class="unidad-header">UNIDAD 3: Ecuaciones e introducción al lenguaje algebraico</div>
+
+  <!-- OBJETIVO UNIDAD 3 -->
+  <table class="plan-table" style="margin-top:10px;">
+    <tr><th colspan="2">OBJETIVO DE LA UNIDAD 3</th></tr>
+    <tr>
+      <td colspan="2">Introducir al estudiante en el lenguaje algebraico formal, identificando la estructura de una ecuación y sus elementos constitutivos, para resolver ecuaciones simples de primer grado mediante principios de equivalencia y operaciones inversas, interpretando sus resultados en contextos reales.</td>
+    </tr>
+  </table>
+
+  <!-- TEMA 3.1 -->
+  <div class="tema-header">📌 Tema 1.1: Estructura de una ecuación</div>
+  <table class="plan-table">
+    <tr>
+      <th style="width:25%;">Componente</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td class="sub-th">Subtemas</td>
+      <td>
+        <ul class="content-list">
+          <li><strong>Concepto de ecuación:</strong> definición formal y diferencias con una expresión aritmética.</li>
+          <li><strong>Elementos de una ecuación:</strong> incógnita, términos, coeficientes, miembro izquierdo y miembro derecho, signo de igualdad (=).</li>
+          <li><strong>Diferencia entre expresión algebraica y ecuación:</strong> identificación y clasificación.</li>
+          <li><strong>Tipos de ecuaciones según su forma:</strong> ecuaciones simples, ecuaciones de una sola incógnita.</li>
+          <li><strong>Lenguaje cotidiano expresado en forma algebraica:</strong> traducción de enunciados verbales a lenguaje algebraico.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">DCD</td>
+      <td>Identificar y describir la estructura de una ecuación algebraica, distinguiendo sus elementos constitutivos (incógnita, coeficientes, términos, miembros y signo de igualdad), y diferenciar una expresión algebraica de una ecuación en situaciones reales y formales.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Indicadores de Evaluación</td>
+      <td>
+        <ul class="content-list">
+          <li>Define con sus propias palabras qué es una ecuación y la distingue de una expresión algebraica.</li>
+          <li>Identifica y nombra correctamente los elementos de una ecuación (incógnita, coeficiente, término independiente, miembros).</li>
+          <li>Clasifica ecuaciones según su tipo y número de incógnitas.</li>
+          <li>Traduce enunciados del lenguaje cotidiano al lenguaje algebraico de forma correcta.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Estrategia Metodológica</td>
+      <td>
+        <strong>Inicio:</strong> Presentación de situaciones de la vida diaria redactadas en lenguaje verbal («El doble de un número más tres es igual a once»). Los estudiantes identifican la incógnita intuitivamente.<br/><br/>
+        <strong>Construcción:</strong> Análisis guiado de una ecuación proyectada: etiquetado colaborativo de cada elemento (incógnita, coeficiente, término independiente, miembro izquierdo/derecho). Actividad de clasificación: ¿es expresión algebraica o ecuación?<br/><br/>
+        <strong>Consolidación:</strong> Traducción grupal e individual de 5 enunciados cotidianos a lenguaje algebraico. Corrección colectiva con retroalimentación inmediata.
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Recursos</td>
+      <td>Pizarra, marcadores de colores (uno por elemento de la ecuación), fichas de clasificación, tarjetas con enunciados cotidianos, proyector con presentación de ejemplos.</td>
+    </tr>
+  </table>
+
+  <!-- TEMA 3.2 -->
+  <div class="tema-header">📌 Tema 1.2: Comprendiendo y resolviendo ecuaciones simples</div>
+  <table class="plan-table">
+    <tr>
+      <th style="width:25%;">Componente</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td class="sub-th">Subtemas</td>
+      <td>
+        <ul class="content-list">
+          <li><strong>Identificación de la incógnita</strong> en una ecuación dada.</li>
+          <li><strong>Principio de equivalencia:</strong> cualquier operación aplicada a un miembro debe aplicarse al otro.</li>
+          <li><strong>Operaciones inversas:</strong> suma ↔ resta, multiplicación ↔ división.</li>
+          <li><strong>Resolución de ecuaciones de primer grado:</strong> del tipo x + a = b y ax = b.</li>
+          <li><strong>Verificación de la solución:</strong> sustitución de la incógnita para comprobar la igualdad.</li>
+          <li><strong>Resolución de problemas sencillos</strong> mediante ecuaciones.</li>
+          <li><strong>Interpretación del resultado</strong> en contextos reales.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">DCD</td>
+      <td>Resolver ecuaciones de primer grado con una incógnita mediante la aplicación del principio de equivalencia y operaciones inversas, verificar la solución obtenida e interpretar los resultados en situaciones de la vida cotidiana.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Indicadores de Evaluación</td>
+      <td>
+        <ul class="content-list">
+          <li>Aplica el principio de equivalencia de forma correcta en la resolución de ecuaciones.</li>
+          <li>Utiliza operaciones inversas para despejar la incógnita en ecuaciones del tipo x + a = b y ax = b.</li>
+          <li>Verifica la solución sustituyendo el valor encontrado en la ecuación original.</li>
+          <li>Plantea y resuelve problemas sencillos de la vida real mediante ecuaciones de primer grado.</li>
+          <li>Interpreta el significado del resultado en el contexto del problema planteado.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Estrategia Metodológica</td>
+      <td>
+        <strong>Inicio:</strong> Juego de la «balanza algebraica»: representar ecuaciones con objetos físicos en una balanza real o dibujada para que los estudiantes visualicen la equivalencia entre miembros.<br/><br/>
+        <strong>Construcción:</strong> Modelado paso a paso de la resolución de ecuaciones en la pizarra (docente → trabajo guiado en dúos → trabajo individual). Énfasis en los pasos: identificar la incógnita → aplicar operación inversa → verificar. Fichas de trabajo progresivo con nivel de complejidad ascendente.<br/><br/>
+        <strong>Consolidación:</strong> Resolución de 3 problemas contextualizados con ecuaciones. Exposición breve de un estudiante voluntario explicando su proceso de resolución. Coevaluación con rúbrica de pares.
+      </td>
+    </tr>
+    <tr>
+      <td class="sub-th">Recursos</td>
+      <td>Pizarra, balanza didáctica, fichas de ejercicios graduales, tarjetas de problemas contextualizados, cuadernos, calculadoras (fase de verificación), rúbrica de coevaluación.</td>
+    </tr>
+    <tr>
+      <td class="sub-th">Adaptación Curricular</td>
+      <td>Para estudiantes con NEE: uso de plantillas estructuradas paso a paso con guía visual. Para estudiantes de alto desempeño: ampliación hacia ecuaciones con paréntesis o dos operaciones: a(x + b) = c.</td>
+    </tr>
+  </table>
+
+  <!-- EVALUACIÓN UNIDAD 3 -->
+  <div class="unidad-sub">📊 Evaluación – Unidad 3</div>
+  <table class="eval-table">
+    <thead>
+      <tr>
+        <th>Técnica</th>
+        <th>Instrumento</th>
+        <th>Criterio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prueba escrita sumativa</td>
+        <td>Examen de ecuaciones</td>
+        <td>Estructura, resolución, verificación e interpretación de resultados.</td>
+      </tr>
+      <tr>
+        <td>Coevaluación</td>
+        <td>Rúbrica de pares</td>
+        <td>Proceso de resolución y argumentación matemática.</td>
+      </tr>
+      <tr>
+        <td>Resolución de problema real</td>
+        <td>Rúbrica analítica</td>
+        <td>Planteamiento, desarrollo correcto e interpretación contextualizada.</td>
+      </tr>
+      <tr>
+        <td>Observación participativa</td>
+        <td>Registro anecdótico</td>
+        <td>Participación, uso correcto del lenguaje algebraico y actitud investigativa.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr class="sep"/>
+
+  <!-- BIBLIOGRAFÍA -->
+  <div class="unidad-sub">📚 Bibliografía (APA 7.ª edición)</div>
+  <div style="margin-top:10px; padding: 10px;">
+    <p class="biblio">Freudenthal, H. (1991). <em>Revisiting mathematics education: China lectures.</em> Kluwer Academic Publishers.</p>
+    <p class="biblio">Kieran, C. (2004). Algebraic thinking in the early grades: What is it? <em>The Mathematics Educator, 8</em>(1), 139–151.</p>
+    <p class="biblio">Mason, J., Graham, A., & Johnston-Wilder, S. (2005). <em>Developing thinking in algebra.</em> SAGE Publications.</p>
+    <p class="biblio">Ministerio de Educación del Ecuador. (2016). <em>Currículo de los niveles de educación obligatoria: Matemática.</em> MinEduc. https://educacion.gob.ec/curriculo/</p>
+    <p class="biblio">Ministerio de Educación del Ecuador. (2021). <em>Instructivo para planificaciones curriculares del Sistema Nacional de Educación.</em> MinEduc.</p>
+    <p class="biblio">Pólya, G. (1945). <em>How to solve it: A new aspect of mathematical method.</em> Princeton University Press.</p>
+    <p class="biblio">Prieto, G. (2006). <em>El pensamiento algebraico y sus implicaciones en la educación secundaria.</em> Editorial Universitaria.</p>
+    <p class="biblio">Tall, D. (2004). Thinking through three worlds of mathematics. En <em>Proceedings of the 28th Conference of the International Group for the Psychology of Mathematics Education</em> (Vol. 4, pp. 281–288). PME.</p>
+    <p class="biblio">GeoGebra. (2024). <em>GeoGebra – Mathematics for everyone.</em> https://www.geogebra.org</p>
+  </div>
+
+  <!-- FIRMAS -->
+  <div class="firmas" style="margin-top:50px;">
+    <div class="firma-box">
+      ___________________________<br/>
+      <strong>Docente / Practicante</strong><br/>
+      <em>Firma y fecha</em>
+    </div>
+    <div class="firma-box">
+      ___________________________<br/>
+      <strong>Tutor Académico</strong><br/>
+      <em>Firma y fecha</em>
+    </div>
+    <div class="firma-box">
+      ___________________________<br/>
+      <strong>Autoridad Institucional</strong><br/>
+      <em>Firma y fecha</em>
+    </div>
+  </div>
+
+  <!-- SLOGAN -->
+  <div class="slogan" style="margin-top:30px;">
+    "CAMINEMOS JUNTOS A LA EXCELENCIA"
+  </div>
+
+</div>
+</body>
+</html>
